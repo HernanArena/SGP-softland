@@ -1,0 +1,11 @@
+<div class="horizontal-bar sidebar">
+  <div class="page-sidebar-inner slimscroll">
+   <ul class="menu accordion-menu">
+  		<li *ngFor="let item of items" ng-class="{ 'active': isActive(item.link) }">
+  	  	<a href="{{ item.link.indexOf('/') === 0  ? item.link : '#'+item.link }}" class="waves-effect waves-button">
+  				<span class="menu-icon glyphicon glyphicon-{{ item.icon }}"></span><p>{{ item.label }}</p>
+  		  </a>
+  		</li>
+  	</ul>
+  </div>
+</div>
